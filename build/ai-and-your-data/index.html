@@ -58,13 +58,13 @@
 <p>Before the first request to one of PadCode's models, from the AI Agent or from Formula from words, PadCode asks <strong>Send this to the AI model?</strong>:</p>
 <ul><li><strong>Allow</strong> sends it, and PadCode doesn't ask again.</li><li><strong>Not Now</strong> sends nothing. In the AI Agent, your message stays in the box for later.</li></ul>
 <h2 id="the-ai-agent-with-padcodes-models"><a class="anchor" href="#the-ai-agent-with-padcodes-models" aria-label="Link to this section">#</a>The AI Agent, with PadCode's models</h2>
-<p>Each request goes to PadCode's server, and from there to the model's provider through OpenRouter. It carries:</p>
+<p>Each request goes to PadCode's server, and from there to the AI model, which another company runs. It carries:</p>
 <ul><li>your message, and the chat so far;</li><li>the app you have open: its screens, the views on them, its variables and their starting values, its steps and its theme colors;</li><li>what you're looking at: the screen on the canvas and what you've selected, so "make this blue" works;</li><li>the <strong>names</strong> of the app's images, fonts, files and secrets, and of your <a href="/build/my-components/">My Components</a>, so it can use them. It never gets a secret's value, and it doesn't get the pictures, fonts or files themselves.</li></ul>
 <p>PadCode counts the AI credits each request used, by day and model, for your plan's allowance and the <strong>Usage</strong> you see in <a href="/get-started/plans-and-billing/#plan-and-billing">Plan &amp; Billing</a>.</p>
 <h2 id="the-ai-agent-with-your-own-model"><a class="anchor" href="#the-ai-agent-with-your-own-model" aria-label="Link to this section">#</a>The AI Agent, with your own model</h2>
 <p>With one of <a href="/build/ai-agent/#your-own-models">your own models</a> picked, the agent sends the same things straight from your iPad to the address you gave, with your key. Nothing goes through PadCode's server, PadCode doesn't ask the question above, and no AI credits are used: your provider bills you. Your key is kept in this iPad's Keychain and sent only to that address.</p>
 <h2 id="formula-from-words"><a class="anchor" href="#formula-from-words" aria-label="Link to this section">#</a>Formula from words</h2>
-<p><strong>Describe it</strong> on the Formula sheet always uses PadCode's model, through PadCode's server and OpenRouter, even when you've picked your own model in the AI Agent. It sends:</p>
+<p><strong>Describe it</strong> on the Formula sheet always uses PadCode's model, through PadCode's server, even when you've picked your own model in the AI Agent. It sends:</p>
 <ul><li>what you typed in <strong>Describe it</strong>, and the formula already in the box, if there is one;</li><li>the names you can use there, with what each one holds right now (its first 80 characters).</li></ul>
 <p>See <a href="/data/formulas/#writing-a-formula-from-words">Writing a formula from words</a>.</p>
 <h2 id="what-stays-on-your-ipad"><a class="anchor" href="#what-stays-on-your-ipad" aria-label="Link to this section">#</a>What stays on your iPad</h2>
