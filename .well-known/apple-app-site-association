@@ -1,0 +1,20 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": [
+          "5C6U25LF7M.com.flutterninja.padcode"
+        ],
+        "components": [
+          {
+            "/": "/item/*",
+            "?": {
+              "id": "?*"
+            },
+            "comment": "A Marketplace item someone shared"
+          }
+        ]
+      }
+    ]
+  }
+}
