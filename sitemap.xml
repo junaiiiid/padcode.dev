@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://padcode.dev/</loc></url>
+  <url><loc>https://padcode.dev/padlauncher/</loc></url>
   <url><loc>https://padcode.dev/overview/</loc></url>
   <url><loc>https://padcode.dev/get-started/account/</loc></url>
   <url><loc>https://padcode.dev/get-started/around-padcode/</loc></url>
@@ -249,6 +250,7 @@
   <url><loc>https://padcode.dev/test-and-ship/issues/</loc></url>
   <url><loc>https://padcode.dev/test-and-ship/install/</loc></url>
   <url><loc>https://padcode.dev/test-and-ship/my-apps/</loc></url>
+  <url><loc>https://padcode.dev/test-and-ship/on-iphone/</loc></url>
   <url><loc>https://padcode.dev/get-started/marketplace/</loc></url>
   <url><loc>https://padcode.dev/test-and-ship/publish/</loc></url>
   <url><loc>https://padcode.dev/cookbook/</loc></url>
@@ -266,4 +268,7 @@
   <url><loc>https://padcode.dev/terms-and-conditions/</loc></url>
   <url><loc>https://padcode.dev/delete-account/</loc></url>
   <url><loc>https://padcode.dev/support/</loc></url>
+  <url><loc>https://padcode.dev/padlauncher/privacy-policy/</loc></url>
+  <url><loc>https://padcode.dev/padlauncher/terms-and-conditions/</loc></url>
+  <url><loc>https://padcode.dev/padlauncher/support/</loc></url>
 </urlset>

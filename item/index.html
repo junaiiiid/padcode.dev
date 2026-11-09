@@ -20,8 +20,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&family=Plus+Jakarta+Sans:ital,wght@0,600;0,700;0,800;1,800&display=swap">
-<link rel="stylesheet" href="/static/site.css?v=fc3bed0f5f">
-<script src="/static/site.js?v=fc3bed0f5f" defer></script>
+<link rel="stylesheet" href="/static/site.css?v=e687466f4c">
+<script src="/static/site.js?v=e687466f4c" defer></script>
 
 <meta name="robots" content="noindex">
 </head>
@@ -47,10 +47,10 @@
 
 <main id="main" class="main main-plain">
   <div class="notfound">
-    <img src="/static/app-icon-256.png" alt="" width="96" height="96">
+    <img id="item-icon" src="/static/app-icon-256.png" alt="" width="96" height="96">
     <h1>Someone shared a PadCode item with you</h1>
-    <p>It's in PadCode's Marketplace: an app, a widget, a theme or a component, free to get. PadCode is for iPad: with it installed, links like this one open it there.</p>
-    <div class="cta-row"><a class="btn btn-primary" id="open-item" href="padcode://open/marketplace">Open in PadCode</a><a class="btn" href="https://apps.apple.com/app/id6828282064">Get PadCode</a></div>
+    <p id="item-text">It's in PadCode's Marketplace: an app, a widget, a theme or a component, free to get. PadCode is for iPad: with it installed, links like this one open it there.</p>
+    <div class="cta-row"><a class="btn btn-primary" id="open-item" href="padcode://open/marketplace">Open in PadCode</a><a class="btn" id="get-app" href="https://apps.apple.com/us/app/padcode-no-code-app-builder/id6828282064">Get PadCode</a></div>
   </div>
 </main>
 <footer class="footer">
@@ -84,10 +84,23 @@
 </dialog>
 
 <script>
-  // The shared item, from ?id= (letters, digits, - and _ only, as the app's AppLink takes them), as PadCode's own link.
+  // The shared item, from ?id= (letters, digits, - and _ only, as the apps' links take them). On an iPhone it's
+  // PadLauncher's: PadCode is for iPad, and PadLauncher runs the Marketplace's apps and widgets there.
   (function () {
     var id = new URLSearchParams(location.search).get("id");
-    if (id && /^[A-Za-z0-9_-]{1,128}$/.test(id)) document.getElementById("open-item").href = "padcode://item/" + id;
+    var valid = id && /^[A-Za-z0-9_-]{1,128}$/.test(id);
+    var open = document.getElementById("open-item");
+    if (/iPhone|iPod/.test(navigator.userAgent)) {
+      document.getElementById("item-icon").src = "/static/padlauncher-icon-256.png";
+      document.getElementById("item-text").textContent = "It's in PadCode's Marketplace. On iPhone, PadLauncher, PadCode's free app for iPhone, runs its apps and widgets: with it installed, links like this one open it there.";
+      open.textContent = "Open in PadLauncher";
+      open.href = valid ? "padlauncher://item/" + id : "padlauncher://";
+      var get = document.getElementById("get-app");
+      get.textContent = "Get PadLauncher";
+      get.href = "https://apps.apple.com/us/app/padlauncher/id6831074156";
+    } else if (valid) {
+      open.href = "padcode://item/" + id;
+    }
   })();
 </script>
 </body>

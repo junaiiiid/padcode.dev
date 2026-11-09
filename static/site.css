@@ -273,6 +273,13 @@ figcaption { font-size: 14px; color: var(--muted); margin-top: 10px; line-height
 /* MARK: Plain pages: legal, 404 */
 .main-plain { padding: 40px 24px 72px; }
 .doc-plain { max-width: 760px; }
+/* PadLauncher, on the home page: its icon, what it does, and the way to it. */
+.iphone-band { max-width: 1216px; margin: 8px auto 24px; padding: 24px; display: flex; gap: 20px; align-items: flex-start; border-radius: 20px; background: var(--bg-soft); border: 1px solid var(--line); }
+.iphone-band img { border-radius: 18px; flex: none; box-shadow: var(--shadow); }
+.iphone-band h2 { font: 700 24px/1.25 var(--display); letter-spacing: -0.02em; margin: 0 0 6px; }
+.iphone-band p { color: var(--text-2); margin: 0 0 16px; max-width: 720px; }
+.btn.is-disabled { opacity: 0.6; pointer-events: none; }
+.app-legal { margin: 28px 0 0; color: var(--text-2); font-size: 15px; }
 .notfound { text-align: center; max-width: 520px; margin: 48px auto; }
 .notfound img { border-radius: 22px; }
 .notfound h1 { font: 800 36px/1.2 var(--display); margin: 20px 0 10px; }
@@ -344,6 +351,7 @@ figcaption { font-size: 14px; color: var(--muted); margin-top: 10px; line-height
   .main { padding: 24px 20px 56px; }
   .hero { grid-template-columns: 1fr; padding: 40px 20px 24px; gap: 32px; }
   .start, .cards-section { padding: 16px 20px; }
+  .iphone-band { margin: 8px 20px 16px; padding: 18px; flex-direction: column; }
   .steps { grid-template-columns: 1fr; }
   .search-btn { min-width: 0; }
   .search-btn span, .search-btn kbd { display: none; }
